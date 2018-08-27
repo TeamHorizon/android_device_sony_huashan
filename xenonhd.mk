@@ -16,7 +16,7 @@
 #
 
 # Inherit common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/xenonhd/config/common_full_phone.mk)
 
 # Inherit device configurations
 $(call inherit-product, device/sony/huashan/device.mk)
@@ -27,7 +27,7 @@ TARGET_SCREEN_WIDTH := 720
 
 # Device identifications
 PRODUCT_DEVICE := huashan
-PRODUCT_NAME := lineage_huashan
+PRODUCT_NAME := xenonhd_huashan
 PRODUCT_BRAND := Sony
 PRODUCT_MANUFACTURER := Sony
 PRODUCT_MODEL := Xperia SP
@@ -39,3 +39,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 # Build fingerprint
 BUILD_FINGERPRINT := Sony/C5303/C5303:4.3/12.1.A.1.207/Nvt_nw:user/release-keys
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.xenonhd.maintainer=dadi11 \
+    ro.xenonhd.donate="https://www.paypal.me/dadi11"
